@@ -53,3 +53,28 @@ Then("Step three stepper circle should be blue", async function () {
         "rgb(1, 201, 255)"
     );
 });
+
+Then("the upfront payment summary should be displayed", async function () {
+    await expect(paymentPlanPage.basePriceAmountUnderUpfront).toBeVisible();
+    await expect(
+        paymentPlanPage.upfrontDiscountAmountUnderUpfront
+    ).toBeVisible();
+    await expect(paymentPlanPage.subtotalAmountUnderUpfront).toBeVisible();
+});
+
+When("User select installments payment plan", async function () {
+    await paymentPlanPage.selectPaymentPlan("installments");
+});
+
+Then("the installment payment summary should be displayed", async function () {
+    await expect(paymentPlanPage.basePriceTextUnderInstallments).toBeVisible();
+    await expect(
+        paymentPlanPage.installmentsNumberUnderInstallments
+    ).toBeVisible();
+    await expect(
+        paymentPlanPage.pricePerInstallmentsAmountUnderInstallments
+    ).toBeVisible();
+    await expect(
+        paymentPlanPage.firstMonthPaymentAmountUnderInstallments
+    ).toBeVisible();
+});

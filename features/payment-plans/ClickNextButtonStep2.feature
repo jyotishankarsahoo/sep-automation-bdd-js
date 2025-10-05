@@ -10,8 +10,6 @@ Feature: Click on the next button on payment plans page   #! Test Only
     #* AC5: A price summary should be displayed.
     #* AC6: The back button should be displayed.
     #* AC7: By default, the pay button should be displayed.
-    #
-    #
 
     Background:
         Given User is on the enrollment page
@@ -31,6 +29,12 @@ Feature: Click on the next button on payment plans page   #! Test Only
         Then Step one circle should be green
         And Step two stepper circle should be green
         And Step three stepper circle should be blue
+    @sep16-3
+    Scenario: Verify that payment summary is displayed after clicking a payment plan
+        When User select upfront payment plan
+        Then the upfront payment summary should be displayed
+        When User select installments payment plan
+        Then the installment payment summary should be displayed
 
 # Scenario: Select a Payment plan and proceed to Review step
 #     When User selects a payment plan
