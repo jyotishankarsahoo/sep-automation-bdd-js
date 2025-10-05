@@ -20,3 +20,8 @@ Given("User completed the start application step", async function () {
     await startApplicationPage.selectHowDidYouHearAboutUs("linkedin");
     await startApplicationPage.clickNextButton();
 });
+
+Given("User completed the payment plan page", async function () {
+    await paymentPlanPage.selectPaymentPlan("upfront");
+    await paymentPlanPage.clickNextButton();
+});
