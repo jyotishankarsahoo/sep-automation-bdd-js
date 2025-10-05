@@ -6,10 +6,8 @@ Feature: Program start dates and Refund dates
 
     #* AC1: Program Start date and refund dates must be displayed in Step 1 in Test Automation with Selenium Program.
 
-    #TODO: Create scenarios that cover all the acceptance criteria
-
     Background:
-        Given user is on the enrollment page
+        Given User is on the enrollment page
 
     Scenario: Verify program start date and refund date are displayed
         Then Program start date is visible
