@@ -14,4 +14,4 @@ Feature: Display the product information
     #TODO: Create scenarios that cover all the acceptance criteria
 
     Background:
-        Given user is on the enrollment page
+        Given User is on the enrollment page

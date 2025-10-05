@@ -41,14 +41,3 @@ Feature: Click on the next button on payment plans page   #! Test Only
         When User clicks the back button on the payment plan page
         Then Step one stepper circle should be blue
 
-# Scenario: Select a Payment plan and proceed to Review step
-#     When User selects a payment plan
-#     And User clicks on next button
-#     Then User should navigate to "3 - Review" Step
-#     And the "Start Application" and "Payment Plan" steps should be marked as completed
-#     And the "Review" step should be highlighted as current step
-#     And Payment form should be displayed
-#     And Price summary should be displayed
-#     And Back button should be displayed
-
-

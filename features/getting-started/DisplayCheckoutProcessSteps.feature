@@ -11,4 +11,4 @@ Feature: Display the steps of the checkout process
     #TODO: Create scenarios that cover all the acceptance criteria
 
     Background:
-        Given user is on the enrollment page
+        Given User is on the enrollment page
