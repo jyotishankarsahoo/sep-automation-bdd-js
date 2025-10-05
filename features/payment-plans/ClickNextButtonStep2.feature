@@ -10,6 +10,8 @@ Feature: Click on the next button on payment plans page   #! Test Only
     #* AC5: A price summary should be displayed.
     #* AC6: The back button should be displayed.
     #* AC7: By default, the pay button should be displayed.
+    #
+    #
 
     Background:
         Given User is on the enrollment page
@@ -20,6 +22,15 @@ Feature: Click on the next button on payment plans page   #! Test Only
         Then the next button on step two should be disabled by default
         When User select upfront payment plan
         Then the Next button should be enabled
+    @sep16-2
+    Scenario: Verify that Step one and Step two stepper circle are green and Step three stepper is blue after clicking next button
+        Then Step one circle should be green
+        And Step two stepper circle should be blue
+        When User select upfront payment plan
+        And User clicks the next button on payment plan page
+        Then Step one circle should be green
+        And Step two stepper circle should be green
+        And Step three stepper circle should be blue
 
 # Scenario: Select a Payment plan and proceed to Review step
 #     When User selects a payment plan
