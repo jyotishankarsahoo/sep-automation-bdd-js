@@ -17,7 +17,7 @@ Feature: Error message for the invalid card number
         When User enters an invalid card number
         And User checks on t&C check box
         Then the card number error message "Your card number is invalid." is displayed
-
+    @sep25-2
     Scenario: Verify that an error message is displayed when user entered incomplete number
         When User enters incomplete number
         And User checks on t&C check box
