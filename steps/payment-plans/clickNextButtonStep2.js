@@ -78,3 +78,25 @@ Then("the installment payment summary should be displayed", async function () {
         paymentPlanPage.firstMonthPaymentAmountUnderInstallments
     ).toBeVisible();
 });
+
+Then(
+    "the back button should be displayed on the payment plan page",
+    async function () {
+        await expect(paymentPlanPage.backButton).toBeVisible();
+    }
+);
+
+Then("the back button is enabled on payment plan page", async function () {
+    await expect(paymentPlanPage.backButton).toBeEnabled();
+});
+
+When("User clicks the back button on the payment plan page", async function () {
+    await paymentPlanPage.backButton.click();
+});
+
+Then("Step one stepper circle should be blue", async function () {
+    await expect(startApplicationPage.startApplicationStepCircle).toHaveCSS(
+        "background-color",
+        "rgb(1, 201, 255)"
+    );
+});

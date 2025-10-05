@@ -9,7 +9,6 @@ Feature: Click on the next button on payment plans page   #! Test Only
     #* AC4: The payment component should be displayed.
     #* AC5: A price summary should be displayed.
     #* AC6: The back button should be displayed.
-    #* AC7: By default, the pay button should be displayed.
 
     Background:
         Given User is on the enrollment page
@@ -35,6 +34,12 @@ Feature: Click on the next button on payment plans page   #! Test Only
         Then the upfront payment summary should be displayed
         When User select installments payment plan
         Then the installment payment summary should be displayed
+    @sep16-4
+    Scenario: Verify Back button is displayed and navigates back to start application step when clicked
+        Then the back button should be displayed on the payment plan page
+        And the back button is enabled on payment plan page
+        When User clicks the back button on the payment plan page
+        Then Step one stepper circle should be blue
 
 # Scenario: Select a Payment plan and proceed to Review step
 #     When User selects a payment plan
